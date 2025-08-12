@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clock, Stopwatch & Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Digital Clock, Stopwatch & Timer</h1>
+
+      <div class="boxes-wrapper">
+        <section class="box clock-box">
+          <h2><i class="fa-regular fa-clock"></i> Digital Clock</h2>
+          <div id="digital-clock" class="display clock-display"></div>
+        </section>
+
+        <section class="box stopwatch-box">
+          <h2><i class="fa-regular fa-stopwatch"></i> Stopwatch</h2>
+          <div id="stopwatch" class="display">00:00:00</div>
+          <div class="btn-group">
+            <button id="sw-start" title="Start">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button id="sw-pause" title="Pause" disabled>
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button id="sw-reset" title="Reset" disabled>
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="box timer-box">
+          <h2><i class="fa-regular fa-hourglass-half"></i> Timer</h2>
+          <div class="timer-inputs">
+            <input
+              type="number"
+              id="timer-minutes"
+              placeholder="Minutes"
+              min="0"
+              aria-label="Timer minutes"
+            />
+            <input
+              type="number"
+              id="timer-seconds"
+              placeholder="Seconds"
+              min="0"
+              max="59"
+              aria-label="Timer seconds"
+            />
+          </div>
+          <div id="timer" class="display timer-display">00:00</div>
+          <div class="btn-group">
+            <button id="timer-start" title="Start">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button id="timer-pause" title="Pause" disabled>
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button id="timer-reset" title="Reset" disabled>
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
